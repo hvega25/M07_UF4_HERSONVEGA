@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+<p> MOSTRANDO DATOS DE ALUMNO</p>
+
+<div>
+    <ul>
+        {% for k,v in alu.items %}
+        <h3> {{ k }}</h3>
+        <li> Nom:  {{ v.name }}</li>
+        <li> Cognom:  {{ v.surname }}</li>
+        <li> Edat:  {{ v.age }}</li>
+        <br>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
