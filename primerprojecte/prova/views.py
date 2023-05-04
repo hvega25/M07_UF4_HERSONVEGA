@@ -3,12 +3,11 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
 
-# Create your views here.
 
 def index(request):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render())
+    return render(request, 'index.html')
 
+#Método que devuelve los datos de los profesores
 def prof (request):
     profesores = {
         'profesor 1': {"id": "1", "name": "herson" , "surname": "vega", "age": "27"},
@@ -18,7 +17,7 @@ def prof (request):
     context = {'prf': profesores}
     return render(request, 'profesor.html', context)
 
-
+#Método que devuelve los datos de los alumnos
 def alum (request):
     alumnes = {
         'alumno 1': { "id": "1","name": "herson" , "surname": "vega", "age": "27"},

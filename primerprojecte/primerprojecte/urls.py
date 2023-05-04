@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+#Ruta primaria para indicar que va hacía una aplicación
 urlpatterns = [
-    path('prova/', include('prova.urls')),
-    path('admin/', admin.site.urls),
+     path('prova/', include('prova.urls')),
+    
 ]
