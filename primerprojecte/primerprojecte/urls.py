@@ -15,9 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
+from . import views
 
 #Ruta primaria para indicar que va hacía una aplicación
 urlpatterns = [
+   
+     path('' , views.index , name='index'),
+     #url que te dirige a las aplicaciones
      path('prova/', include('prova.urls')),
     
 ]
+
+
+
+

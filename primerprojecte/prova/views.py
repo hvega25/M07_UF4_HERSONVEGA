@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from django.shortcuts import render
 
-
+"""
+#creación de vista predeterminada
 def index(request):
-    return render(request, 'index.html')
-
+    template = loader.get_template('index.html')
+    return HttpResponse(template.render())
+"""
 #Método que devuelve los datos de los profesores
 def prof (request):
     profesores = {
